@@ -7,14 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-green-500 min-h-screen">
 
     <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-2xl font-bold mb-4">🛒 Toko Sederhana</h1>
+        <h1 class="text-2xl font-bold mb-4 text-white-200">🛒 Toko Sederhana</h1>
 
         <!-- FORM TAMBAH / EDIT PRODUK -->
-        <div class="bg-white p-4 rounded shadow mb-6">
-            <h2 id="formTitle" class="font-semibold mb-2">Tambah Produk</h2>
+        <div class="bg-green-200 p-4 rounded shadow mb-6">
+            <h2 id="formTitle" class="font-semibold mb-2 text-black-700">Tambah Produk</h2>
 
             <form id="productForm" class="grid grid-cols-3 gap-2">
                 <input type="hidden" id="productId" />
@@ -22,7 +22,7 @@
                 <input id="name" class="border p-2 rounded" placeholder="Nama produk" required />
                 <input id="price" type="number" class="border p-2 rounded" placeholder="Harga" required />
 
-                <button id="submitBtn" class="col-span-3 bg-red-500 hover:bg-red-500 text-white py-2 rounded">
+                <button id="submitBtn" class="col-span-3 bg-blue-500 hover:bg-red-500 text-white py-2 rounded">
                     Simpan
                 </button>
 
@@ -35,10 +35,10 @@
 
 
         <!-- TABEL PRODUK -->
-        <div class="bg-white rounded shadow overflow-hidden">
+        <div class="bg-green-200 rounded shadow overflow-hidden">
             <table class="w-full border-collapse">
                 <thead>
-                    <tr class="bg-gray-200 text-left">
+                    <tr class="bg-green-200 text-left">
                         <th class="p-2 border">ID</th>
                         <th class="p-2 border">Nama</th>
                         <th class="p-2 border">Harga</th>
