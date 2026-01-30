@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8" />
-    <title>Toko Sederhana</title>
+    <title>Toko Sederhana - Animated</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Animasi kustom untuk baris tabel */
+        .fade-in-row { animation: fadeInDown 0.5s; }
+        .fade-out-row { animation: fadeOutRight 0.5s forwards; }
+        tr { transition: all 0.3s ease; }
+        tr:hover { background-color: rgba(255, 255, 255, 0.3); }
+    </style>
 </head>
 
-<body class="bg-green-500 min-h-screen">
+<body class="bg-green-600 min-h-screen transition-all duration-500">
+    <div class="max-w-4xl mx-auto p-6 animate__animated animate__fadeIn">
+        <h1 class="text-3xl font-bold mb-4 text-white drop-shadow-lg">🛒 Toko Sederhana</h1>
 
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-2xl font-bold mb-4 text-white-200">🛒 Toko Sederhana</h1>
-
-        <!-- FORM TAMBAH / EDIT PRODUK -->
-        <div class="bg-green-200 p-4 rounded shadow mb-6">
-            <h2 id="formTitle" class="font-semibold mb-2 text-black-700">Tambah Produk</h2>
-
-            <form id="productForm" class="grid grid-cols-3 gap-2">
+        <div class="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-2xl mb-6 animate__animated animate__zoomIn">
+            <h2 id="formTitle" class="font-bold mb-4 text-green-800 text-lg">Tambah Produk Baru</h2>
+            <form id="productForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <input type="hidden" id="productId" />
-
-                <input id="name" class="border p-2 rounded" placeholder="Nama produk" required />
-                <input id="price" type="number" class="border p-2 rounded" placeholder="Harga" required />
-
-                <button id="submitBtn" class="col-span-3 bg-blue-500 hover:bg-red-500 text-white py-2 rounded">
-                    Simpan
+                <input id="name" class="border-2 border-green-200 p-2 rounded-lg focus:outline-none focus:border-blue-500 transition-all" placeholder="Nama produk" required />
+                <input id="price" type="number" class="border-2 border-green-200 p-2 rounded-lg focus:outline-none focus:border-blue-500 transition-all" placeholder="Harga" required />
+                <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transform active:scale-95 transition-all shadow-md">
+                    Simpan Produk
                 </button>
-
-                <button type="button" id="cancelEditBtn"
-                    class="col-span-3 bg-gray-400 hover:bg-gray-500 text-white py-2 rounded hidden">
+                <button type="button" id="cancelEditBtn" class="bg-gray-500 hover:bg-gray-600 text-white py-2 rounded-lg hidden transition-all">
                     Batal Edit
                 </button>
             </form>
         </div>
 
-
-        <!-- TABEL PRODUK -->
-        <div class="bg-green-200 rounded shadow overflow-hidden">
+        <div class="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl overflow-hidden animate__animated animate__fadeInUp">
             <table class="w-full border-collapse">
                 <thead>
-                    <tr class="bg-green-200 text-left">
-                        <th class="p-2 border">ID</th>
-                        <th class="p-2 border">Nama</th>
-                        <th class="p-2 border">Harga</th>
-                        <th class="p-2 border text-center">Aksi</th>
+                    <tr class="bg-green-800 text-white">
+                        <th class="p-3 text-left">ID</th>
+                        <th class="p-3 text-left">Nama</th>
+                        <th class="p-3 text-left">Harga</th>
+                        <th class="p-3 text-center">Aksi</th>
                     </tr>
                 </thead>
-                <tbody id="productsTable"></tbody>
+                <tbody id="productsTable" class="text-gray-800">
+                    </tbody>
             </table>
         </div>
     </div>
-
     <script src="script.js"></script>
-    </bo
+</body>
+</html>
