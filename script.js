@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/products";
+const API_URL = "https://toko-backend-production.up.railway.app/api/products";
 let isEditMode = false;
 
 // 1. Load semua produk dengan animasi Fade In
